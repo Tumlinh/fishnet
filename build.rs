@@ -277,6 +277,15 @@ fn stockfish_build() {
             }
             .build_both();
         }
+        "arm" => {
+            let native = cfg!(target_arch = "armv7");
+            Target {
+                arch: "armv7",
+                native,
+                sde: false,
+            }
+            .build_both();
+        }
         "aarch64" => {
             let native = cfg!(target_arch = "aarch64");
 
